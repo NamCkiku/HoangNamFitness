@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/lib/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/lib/select2/css/select2.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/lib/jquery.bxslider/jquery.bxslider.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/lib/owl.carousel/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/lib/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/responsive.css" />
+</head>
+<body class="home">
+    
+    <div id="header" class="header">
+        @RenderPage("_TopHeader.cshtml")
+        <!--/.top-header -->
+        <!-- MAIN HEADER -->
+        @RenderPage("_MainHeader.cshtml")
+        <!-- END MANIN HEADER -->
+        @RenderPage("_MenuTop.cshtml")
+    </div>
+    <!-- end header -->
+    <!-- Home slideder-->
+    @RenderPage("_Slider.cshtml")
+    <!-- END Home slideder-->
+    <!-- servives -->
+    <div class="container">
+        <div class="service ">
+            <div class="col-xs-6 col-sm-3 service-item">
+                <div class="icon">
+                    <img alt="services" src="/Content/images/s1.png" />
+                </div>
+                <div class="info">
+                    <a href="#"><h3>Free Shipping</h3></a>
+                    <span>On order over $200</span>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 service-item">
+                <div class="icon">
+                    <img alt="services" src="/Content/images/s2.png" />
+                </div>
+                <div class="info">
+                    <a href="#"><h3>30-day return</h3></a>
+                    <span>Moneyback guarantee</span>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 service-item">
+                <div class="icon">
+                    <img alt="services" src="/Content/images/s3.png" />
+                </div>
+
+                <div class="info">
+                    <a href="#"><h3>24/7 support</h3></a>
+                    <span>Online consultations</span>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 service-item">
+                <div class="icon">
+                    <img alt="services" src="/Content/images/s4.png" />
+                </div>
+                <div class="info">
+                    <a href="#"><h3>SAFE SHOPPING</h3></a>
+                    <span>Safe Shopping Guarantee</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end services -->
+    @RenderBody()
+
+    <!-- Footer -->
+    @RenderPage("_Footer.cshtml")
+
+    <a href="#" class="scroll_top" title="Scroll to Top" style="display: inline;">Scroll</a>
+    <!-- Script-->
+    <script type="text/javascript" src="~/Content/lib/jquery/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="~/Content/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Content/lib/select2/js/select2.min.js"></script>
+    <script type="text/javascript" src="~/Content/lib/jquery.bxslider/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="~/Content/lib/owl.carousel/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="~/Content/lib/jquery.countdown/jquery.countdown.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.actual.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/theme-script.js"></script>
+
+</body>
+</html>

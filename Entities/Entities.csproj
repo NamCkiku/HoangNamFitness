@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1E5F480C-1854-4074-8543-67C1A07855EC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Entities</RootNamespace>
+    <AssemblyName>Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\201702161232324_addDB.cs" />
+    <Compile Include="Migrations\201702161232324_addDB.Designer.cs">
+      <DependentUpon>201702161232324_addDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AclRecord.cs" />
+    <Compile Include="Models\ActivityLog.cs" />
+    <Compile Include="Models\ActivityLogType.cs" />
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\AddressAttribute.cs" />
+    <Compile Include="Models\AddressAttributeValue.cs" />
+    <Compile Include="Models\Affiliate.cs" />
+    <Compile Include="Models\BackInStockSubscription.cs" />
+    <Compile Include="Models\BlogComment.cs" />
+    <Compile Include="Models\BlogPost.cs" />
+    <Compile Include="Models\Campaign.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\CategoryTemplate.cs" />
+    <Compile Include="Models\CheckoutAttribute.cs" />
+    <Compile Include="Models\CheckoutAttributeValue.cs" />
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\CrossSellProduct.cs" />
+    <Compile Include="Models\Currency.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\CustomerAttribute.cs" />
+    <Compile Include="Models\CustomerAttributeValue.cs" />
+    <Compile Include="Models\CustomerRole.cs" />
+    <Compile Include="Models\DBContext.cs" />
+    <Compile Include="Models\DeliveryDate.cs" />
+    <Compile Include="Models\Discount.cs" />
+    <Compile Include="Models\DiscountRequirement.cs" />
+    <Compile Include="Models\DiscountUsageHistory.cs" />
+    <Compile Include="Models\Download.cs" />
+    <Compile Include="Models\EmailAccount.cs" />
+    <Compile Include="Models\ExternalAuthenticationRecord.cs" />
+    <Compile Include="Models\Forums_Forum.cs" />
+    <Compile Include="Models\Forums_Group.cs" />
+    <Compile Include="Models\Forums_Post.cs" />
+    <Compile Include="Models\Forums_PostVote.cs" />
+    <Compile Include="Models\Forums_PrivateMessage.cs" />
+    <Compile Include="Models\Forums_Subscription.cs" />
+    <Compile Include="Models\Forums_Topic.cs" />
+    <Compile Include="Models\GenericAttribute.cs" />
+    <Compile Include="Models\GiftCard.cs" />
+    <Compile Include="Models\GiftCardUsageHistory.cs" />
+    <Compile Include="Models\GoogleProduct.cs" />
+    <Compile Include="Models\Language.cs" />
+    <Compile Include="Models\LocaleStringResource.cs" />
+    <Compile Include="Models\LocalizedProperty.cs" />
+    <Compile Include="Models\Log.cs" />
+    <Compile Include="Models\Manufacturer.cs" />
+    <Compile Include="Models\ManufacturerTemplate.cs" />
+    <Compile Include="Models\MeasureDimension.cs" />
+    <Compile Include="Models\MeasureWeight.cs" />
+    <Compile Include="Models\MessageTemplate.cs" />
+    <Compile Include="Models\News.cs" />
+    <Compile Include="Models\NewsComment.cs" />
+    <Compile Include="Models\NewsLetterSubscription.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderItem.cs" />
+    <Compile Include="Models\OrderNote.cs" />
+    <Compile Include="Models\PermissionRecord.cs" />
+    <Compile Include="Models\Picture.cs" />
+    <Compile Include="Models\Poll.cs" />
+    <Compile Include="Models\PollAnswer.cs" />
+    <Compile Include="Models\PollVotingRecord.cs" />
+    <Compile Include="Models\PredefinedProductAttributeValue.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductAttribute.cs" />
+    <Compile Include="Models\ProductAttributeCombination.cs" />
+    <Compile Include="Models\ProductAttributeValue.cs" />
+    <Compile Include="Models\ProductReview.cs" />
+    <Compile Include="Models\ProductReviewHelpfulness.cs" />
+    <Compile Include="Models\ProductTag.cs" />
+    <Compile Include="Models\ProductTemplate.cs" />
+    <Compile Include="Models\ProductWarehouseInventory.cs" />
+    <Compile Include="Models\Product_Category_Mapping.cs" />
+    <Compile Include="Models\Product_Manufacturer_Mapping.cs" />
+    <Compile Include="Models\Product_Picture_Mapping.cs" />
+    <Compile Include="Models\Product_ProductAttribute_Mapping.cs" />
+    <Compile Include="Models\Product_SpecificationAttribute_Mapping.cs" />
+    <Compile Include="Models\QueuedEmail.cs" />
+    <Compile Include="Models\RecurringPayment.cs" />
+    <Compile Include="Models\RecurringPaymentHistory.cs" />
+    <Compile Include="Models\RelatedProduct.cs" />
+    <Compile Include="Models\ReturnRequest.cs" />
+    <Compile Include="Models\ReturnRequestAction.cs" />
+    <Compile Include="Models\ReturnRequestReason.cs" />
+    <Compile Include="Models\RewardPointsHistory.cs" />
+    <Compile Include="Models\ScheduleTask.cs" />
+    <Compile Include="Models\SearchTerm.cs" />
+    <Compile Include="Models\Setting.cs" />
+    <Compile Include="Models\Shipment.cs" />
+    <Compile Include="Models\ShipmentItem.cs" />
+    <Compile Include="Models\ShippingByWeight.cs" />
+    <Compile Include="Models\ShippingMethod.cs" />
+    <Compile Include="Models\ShoppingCartItem.cs" />
+    <Compile Include="Models\SpecificationAttribute.cs" />
+    <Compile Include="Models\SpecificationAttributeOption.cs" />
+    <Compile Include="Models\StateProvince.cs" />
+    <Compile Include="Models\Store.cs" />
+    <Compile Include="Models\StoreMapping.cs" />
+    <Compile Include="Models\StorePickupPoint.cs" />
+    <Compile Include="Models\TaxCategory.cs" />
+    <Compile Include="Models\TaxRate.cs" />
+    <Compile Include="Models\TierPrice.cs" />
+    <Compile Include="Models\Topic.cs" />
+    <Compile Include="Models\TopicTemplate.cs" />
+    <Compile Include="Models\UrlRecord.cs" />
+    <Compile Include="Models\Vendor.cs" />
+    <Compile Include="Models\VendorNote.cs" />
+    <Compile Include="Models\Warehouse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{f23a31fb-5182-4602-9b44-1d9f01a530d3}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201702161232324_addDB.resx">
+      <DependentUpon>201702161232324_addDB.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
